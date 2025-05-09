@@ -7,12 +7,15 @@
 </head>
 <body>
     <header>
-        <h1>Taller Virtual de Motos</h1>
-        <nav>
-            <!-- Menú básico -->
-            <a href="index.php">Inicio</a> |
-            <a href="registro.php">Registro</a> |
-            <a href="login.php">Login</a>
-        </nav>
-        <hr>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="registro.php">Registro</a></li>
+            <li><a href="login.php">Login</a></li>
+            <?php if (isset($_SESSION['usuario_id'])): ?>
+                <li><a href="dashboard.php">Dashboard</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+</header>
+
