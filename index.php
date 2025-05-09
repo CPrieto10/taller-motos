@@ -24,7 +24,7 @@ session_start();
         echo "<h2>Bienvenido al Taller Virtual de Mantenimiento de Motos</h2>";
         echo "<p>Gestiona tus mantenimientos, tus motos y tus registros fácilmente.</p>";
         echo "<a href='login.php' class='btn'>Iniciar sesión</a> ";
-        echo "<a href='registro.php' class='btn'>Registrarse</a>";
+        echo "<a href='views/registro.php' class='btn'>Registrarse</a>";
         echo "</section>";
     }
     ?>
