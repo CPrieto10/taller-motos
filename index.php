@@ -19,13 +19,17 @@ session_start();
     if (isset($_SESSION['usuario_id'])) {
         include 'views/dashboard.php';
     } else {
-        // Página de bienvenida para usuarios no registrados
-        echo "<section class='bienvenida'>";
-        echo "<h2>Bienvenido al Taller Virtual de Mantenimiento de Motos</h2>";
-        echo "<p>Gestiona tus mantenimientos, tus motos y tus registros fácilmente.</p>";
-        echo "<a href='login.php' class='btn'>Iniciar sesión</a> ";
-        echo "<a href='views/registro.php' class='btn'>Registrarse</a>";
-        echo "</section>";
+        // Página de bienvenida para usuarios no registrados con banner
+        echo "
+        <section class='banner'>
+            <div class='overlay'>
+                <div class='content'>
+                    <h1>Bienvenido al Taller Virtual de Motos</h1>
+                    <p>Gestiona tus mantenimientos, tus motos y tus registros fácilmente.</p>
+                    <a href='views/registro.php' class='btn-registro'>Registrarse</a>
+                </div>
+            </div>
+        </section>";
     }
     ?>
 </main>

@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         $_SESSION['registro_exito'] = "Usuario registrado correctamente. Ahora puedes iniciar sesión.";
-        header("Location: ../login.php");
+        header("Location: ../views/login.php");
     } else {
         $_SESSION['registro_error'] = "Error al registrar el usuario: " . $conn->error;
         header("Location: ../views/registro.php");
